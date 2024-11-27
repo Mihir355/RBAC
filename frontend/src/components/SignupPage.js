@@ -11,7 +11,7 @@ const SignupPage = () => {
   const [error, setError] = useState("");
   const minPasswordLength = 8;
 
-  const api = axios.create({ baseURL: "http://localhost:5000" });
+  const api = axios.create({ baseURL: "https://rbac-backend-y8xs.onrender.com" });
 
   const handleSignUp = async (e) => {
     e.preventDefault();
