@@ -1,0 +1,104 @@
+/* signinpage.css */
+
+/* Container for the Signin Page */
+.signin-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f6f9;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Form Container */
+  .signin-page-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+  }
+  
+  /* Form Group */
+  .signin-page-form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Label Styling */
+  .signin-page-label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  /* Input and Select Fields */
+  .signin-page-input,
+  .signin-page-select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Input and Select Focus Styling */
+  .signin-page-input:focus,
+  .signin-page-select:focus {
+    border-color: #3498db;
+    outline: none;
+  }
+  
+  /* Error Message */
+  .signin-page-error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  /* Button Container - Centered Button */
+  .signin-page-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* Button Styling */
+  .signin-page-button {
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  /* Button Hover Effect */
+  .signin-page-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .signin-page-form {
+      padding: 20px;
+    }
+  
+    .signin-page-input,
+    .signin-page-select,
+    .signin-page-button {
+      font-size: 14px;
+    }
+  }
+  
