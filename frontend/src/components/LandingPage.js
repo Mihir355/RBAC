@@ -38,7 +38,7 @@ const LandingPage = () => {
   const fetchUsersWithRoles = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/user/fetch-users"
+        "https://rbac-backend-y8xs.onrender.com/api/user/fetch-users"
       );
       setUsers(response.data);
       setRoleError(""); // Clear any previous errors
@@ -50,7 +50,7 @@ const LandingPage = () => {
   const handleModifyUserRole = async (userId, newRole) => {
     try {
       const response = await axios.put(
-        "http://localhost:5000/api/user/modify-role",
+        "https://rbac-backend-y8xs.onrender.com/api/user/modify-role",
         { userId, newRole }
       );
       setRoleSuccess(response.data.message);
@@ -71,7 +71,7 @@ const LandingPage = () => {
   const fetchAllBlogs = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/blog/fetch-all-blogs"
+        "https://rbac-backend-y8xs.onrender.com/api/blog/fetch-all-blogs"
       );
       setAllBlogs(response.data);
       setFetchError(""); // Clear any previous errors
@@ -89,7 +89,7 @@ const LandingPage = () => {
   const fetchSampleBlogs = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/blog/fetch-sample-blogs"
+        "https://rbac-backend-y8xs.onrender.com/api/blog/fetch-sample-blogs"
       );
       setSampleBlogs(response.data);
       setFetchError("");
@@ -110,7 +110,7 @@ const LandingPage = () => {
   const fetchUnpublishedBlogs = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/blog/fetch-unpublished-blogs"
+        "https://rbac-backend-y8xs.onrender.com/api/blog/fetch-unpublished-blogs"
       );
       setUnpublishedBlogs(response.data);
       setFetchError("");
@@ -132,7 +132,7 @@ const LandingPage = () => {
     try {
       const managerName = localStorage.getItem("managerName"); // Manager's name
       const response = await axios.post(
-        "http://localhost:5000/api/blog/approve-blog",
+        "https://rbac-backend-y8xs.onrender.com/api/blog/approve-blog",
         {
           blogId,
           managerName,
@@ -157,7 +157,7 @@ const LandingPage = () => {
     try {
       const managerName = localStorage.getItem("managerName"); // Manager's name
       const response = await axios.put(
-        "http://localhost:5000/api/blog/edit-blog",
+        "https://rbac-backend-y8xs.onrender.com/api/blog/edit-blog",
         {
           blogId: editingBlogId,
           title: editedTitle,
@@ -179,7 +179,7 @@ const LandingPage = () => {
     const fetchPublishedBlogs = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/blog/fetch-published-blogs"
+          "https://rbac-backend-y8xs.onrender.com/api/blog/fetch-published-blogs"
         );
         setPublishedBlogs(response.data);
         setFetchError("");
@@ -224,7 +224,7 @@ const LandingPage = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/blog/create",
+        "https://rbac-backend-y8xs.onrender.com/api/blog/create",
         blogData
       );
       setSuccess(response.data.message);
@@ -238,7 +238,7 @@ const LandingPage = () => {
   const handleSubscriptionAction = async (subscriptionId, action) => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/user/approve-subscription",
+        "https://rbac-backend-y8xs.onrender.com/api/user/approve-subscription",
         {
           subscriptionId,
           action,
@@ -251,7 +251,7 @@ const LandingPage = () => {
       const fetchSubscriptions = async () => {
         try {
           const response = await axios.get(
-            "http://localhost:5000/api/user/fetch-subscriptions"
+            "https://rbac-backend-y8xs.onrender.com/api/user/fetch-subscriptions"
           );
           setSubscriptions(response.data);
         } catch (error) {
@@ -276,7 +276,7 @@ const LandingPage = () => {
       const fetchSubscriptions = async () => {
         try {
           const response = await axios.get(
-            "http://localhost:5000/api/user/fetch-subscriptions"
+            "https://rbac-backend-y8xs.onrender.com/api/user/fetch-subscriptions"
           );
           setSubscriptions(response.data);
           setFetchError(""); // Clear any previous errors
@@ -319,7 +319,7 @@ const LandingPage = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/user/request-subscription",
+        "https://rbac-backend-y8xs.onrender.com/api/user/request-subscription",
         subscriptionData
       );
       setSuccess("Subscription request submitted successfully.");
